@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-
 body {
     background: #000;
     min-height: 100vh;
@@ -11,21 +10,18 @@ body {
     font-family: 'Share Tech Mono', monospace;
     padding: 40px 0;
 }
-
 .code-area {
     color: #1a1a1a;
     font-size: 30px;
     line-height: 1.7;
     min-height: 20vh;
 }
-
 .tv-wrapper {
     position: relative;
     width: 100%;
     max-width: 1200px;
     box-shadow: 0 0 60px rgba(255,255,255,0.05), 0 0 0 2px #111;
 }
-
 .screen {
     background: #d0d0d0;
     padding: 36px;
@@ -33,7 +29,6 @@ body {
     overflow: hidden;
     border-radius: 10px;
 }
-
 .screen::before {
     content: '';
     position: absolute;
@@ -48,7 +43,6 @@ body {
     pointer-events: none;
     z-index: 10;
 }
-
 .screen::after {
     content: '';
     position: absolute;
@@ -57,7 +51,6 @@ body {
     pointer-events: none;
     z-index: 11;
 }
-
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -66,36 +59,78 @@ body {
     z-index: 1;
 }
 
+/* Фиксированные размеры убираем — пусть грид сам управляет шириной */
 .gallery-item {
     position: relative;
     overflow: hidden;
+    width: 100%;
 }
-
-.gallery-item.small {
-    width: 120px;
-    height: 120px;
-}
-
 .gallery-item.normal {
-    width: 240px;
     height: 240px;
 }
-
 .gallery-item.large {
-	grid-column: 1 / -1;
-    width: 900px;
+    grid-column: 1 / -1;
     height: 450px;
 }
-
 .gallery-item.special {
-	grid-column: 1 / -1;
-    width: 900px;
+    grid-column: 1 / -1;
     height: 750px;
 }
-
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* Планшет */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 0;
+    }
+    .screen {
+        padding: 16px;
+        border-radius: 6px;
+    }
+    .code-area {
+        font-size: 20px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    .gallery-item.normal {
+        height: 180px;
+    }
+    .gallery-item.large {
+        height: 280px;
+    }
+    .gallery-item.special {
+        height: 420px;
+    }
+}
+
+/* Мобилка */
+@media (max-width: 480px) {
+    .screen {
+        padding: 10px;
+    }
+    .code-area {
+        font-size: 15px;
+        min-height: unset;
+        margin-bottom: 12px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+    }
+    .gallery-item.normal {
+        height: 140px;
+    }
+    .gallery-item.large {
+        height: 200px;
+    }
+    .gallery-item.special {
+        height: 300px;
+    }
 }
