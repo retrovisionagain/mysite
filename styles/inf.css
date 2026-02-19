@@ -25,6 +25,7 @@ body {
     min-height: 82vh;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .screen::before {
@@ -55,7 +56,7 @@ body {
     color: #1a1a1a;
     font-size: 26px;
     line-height: 1.7;
-    min-height: 38vh;
+    min-height: 30vh;
 }
 
 .myicon {
