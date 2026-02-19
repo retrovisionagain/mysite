@@ -26,6 +26,8 @@ body {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .screen::before {
@@ -52,11 +54,21 @@ body {
     z-index: 11;
 }
 
+p {
+	color: #1a1a1a;
+	font-size: 26px;
+}
+
 .code-area {
-    color: #1a1a1a;
-    font-size: 26px;
     line-height: 1.7;
     min-height: 30vh;
+}
+
+.result {
+	position: absolute;
+	bottom: 8px;
+	left: 48px;
+	z-index: 12;
 }
 
 .myicon {

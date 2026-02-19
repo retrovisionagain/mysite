@@ -10,12 +10,24 @@ body {
     font-family: 'Share Tech Mono', monospace;
     padding: 40px 0;
 }
+
+p {
+	color: #1a1a1a;
+	font-size: 26px;
+}
+
 .code-area {
-    color: #1a1a1a;
-    font-size: 30px;
     line-height: 1.7;
     min-height: 20vh;
 }
+
+.result {
+	position: absolute;
+	bottom: 8px;
+	left: 48px;
+	z-index: 12;
+}
+
 .tv-wrapper {
     position: relative;
     width: 100%;
@@ -59,7 +71,6 @@ body {
     z-index: 1;
 }
 
-/* Фиксированные размеры убираем — пусть грид сам управляет шириной */
 .gallery-item {
     position: relative;
     overflow: hidden;
