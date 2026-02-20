@@ -28,6 +28,14 @@ p {
 	z-index: 12;
 }
 
+@media (max-width: 600px) {
+    .result {
+        position: static;
+        margin-top: 8px;
+        padding-bottom: 10px;
+    }
+}
+
 .tv-wrapper {
     position: relative;
     width: 100%;
